@@ -1,0 +1,82 @@
+@import "breakpoints";
+@import "fuentes";
+/*mobile first 0px-500px*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+    background-image: url("../imgs/textura_fondo.jpg");
+    min-height: 100vh;
+    header {
+        background-color: #303030;
+        position: sticky;
+        top: 0;
+        padding-bottom: 0.2em;
+        div{
+            .logo {
+                margin-left: 2em;
+            }
+        }
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            nav {
+                padding-top: 2em;
+                padding-bottom: 0.5em;
+                padding-right: 2em;
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    li{
+                        .botones_nav {
+                            text-decoration: none;
+                            padding: 10px;
+                            color: white;
+                            background-color: purple;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #303030;
+        section{
+            .footer-derechos {
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+        .contenedor-redes {
+            padding-left: 11.5em;
+        }
+    }
+}
+
+@include tablet {
+    .contenedor-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        box-sizing: border-box;
+        width: 30em;
+    }
+
+    .contenedor-redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+}

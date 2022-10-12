@@ -1,0 +1,276 @@
+@import "breakpoints";
+/*mobile first 0px-500px*/
+
+.envolturaGrillaindex {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "carousel"
+        "main"
+        "footer";
+        header {
+            grid-area: header;
+        }
+        
+        .carousel {
+            grid-area: carousel;
+        }
+        
+        main {
+            grid-area: main;
+            padding-top: 1.5em;
+            section{
+                h1 {
+                    text-align: center;
+                    padding-bottom: 1em;
+                    color: gold;
+                    font-weight: bold;
+                }
+                div{
+                    div{
+                        .img-noticias {
+                            height: 290px;
+                            width: 499px;
+                            border: 3px solid black;
+                            padding: 2px;
+                            &:hover{
+                                opacity: 0.5;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                    h3 {
+                        font-family: 'Oswald', sans-serif;
+                        text-align: center;
+                    }
+                    div{
+                        .texto-noticias {
+                            border-left: solid #5B6DCD 5px;
+                            padding: 5px;
+                            margin-left: 1em;
+                            font-family: 'Roboto Condensed', sans-serif;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                div{
+                    .boton-more-news {
+                        padding: 10px;
+                        background-color: yellow;
+                        font-weight: bold;
+                        color: black;
+                        text-decoration: none;
+                        font-weight: bold;
+                        margin-left: 12.5em;
+                    }
+                }
+            }
+            .tour {
+                margin-top: 2em;
+                background-color: black;
+                padding-top: 1em;
+                padding-bottom: 2em;
+                div{
+                    .fechas-tour-celda-descripcion {
+                        border-top: 1px solid white;
+                        border-bottom: 1px solid white;
+                        .fechas-tour-data{
+                            .fechas-tour-fecha {
+                                font-weight: bolder;
+                                color: gold;
+                                text-align: center;
+                            }
+                            .boton-compra-tickets{
+                                margin-top: 1em;
+                                margin-bottom: 1em;
+                                .boton-tickets {
+                                    padding: 10px;
+                                    background-color: yellowgreen;
+                                    font-weight: bold;
+                                    color: black;
+                                    text-decoration: none;
+                                    font-weight: bold;
+                                    margin-left: 13em;
+                                }
+                            }
+                            .fechas-tour-evento{
+                                .fechas-tour-nombre-evento {
+                                    text-align: center;
+                                }
+                                .fechas-tour-ubicacion {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .boton-dates {
+                        box-sizing: border-box;
+                        height: 15px;
+                        .boton-more-dates {
+                            padding: 10px;
+                            background-color: yellow;
+                            font-weight: bold;
+                            color: black;
+                            margin-left: 12em;
+                        
+                        }
+                    }
+                }
+            }
+            .merch{
+                .productos{
+                    .producto {
+                        padding-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .contenedor-img-producto {
+                            background-color: white;
+                            border: 3px solid gold;
+                            padding: 2px;
+                            box-sizing: border-box;
+                            height: 300px;
+                            width: 300px;
+                            .img-producto {
+                                height: 300px;
+                                width: 300px;
+                            }                    
+                        }
+                        .texto-productos {
+                            box-sizing: border-box;
+                            width: 499px;
+                            text-align: center;
+                        
+                        }
+                        .contenedor-botones-compra {
+                            ul{
+                                list-style-type: none;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                .botones-compra {
+                                    padding: 10px;
+                                    background-color: yellowgreen;
+                                    font-weight: bold;
+                                    color: black;
+                                    text-decoration: none;
+                                    margin-left: 0.5em;
+                                    margin-top: 1px;
+                                }
+                            }
+                        }
+                    }
+                    .contenedor-boton-more-merch {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .boton-more-merch {
+                            padding: 10px;
+                            background-color: yellow;
+                            font-weight: bold;
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            grid-area: footer;
+        }
+}
+
+
+@include tablet {
+    .contenedor-imagen-noticias {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    h3 {
+        margin-top: 0.3em;
+    }
+
+    .contenedor-boton-news {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .boton-more-news {
+        padding: 10px;
+        background-color: yellow;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 12em;
+    }
+
+    .boton-tickets {
+        padding: 10px;
+        background-color: yellowgreen;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 12em;
+    }
+
+    .boton-compra-tickets {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .boton-more-dates {
+        padding: 10px;
+        background-color: yellow;
+        font-weight: bold;
+        color: black;
+        margin-right: 12em;
+
+    }
+
+    .boton-dates {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 2em;
+        flex-wrap: wrap;
+    }
+
+    .contenedor-img-producto {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+
+    }
+
+    .contenedor-botones-compra {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 1em;
+    }
+}
+
+@include pc {
+    .texto-noticias {
+        inline-size: 30em;
+    }
+
+    .contenedor-texto-noticias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fechas-tour-tabla {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+}
